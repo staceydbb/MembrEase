@@ -1,0 +1,854 @@
+html, body, .parent, .main, .dashboard {
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, Roboto, Poppins
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    font-style: normal;
+}
+
+.parent{
+    height: 100svh;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #3C8A82;
+    color: #ffffff;
+    box-shadow: -1px 5px 5px 0px rgba(0,0,0,0.199);
+    position: relative;
+    z-index: 1;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.logo-title{
+    margin-left: 12px;
+}
+
+.logo-title > div:first-child{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-title > div:last-child{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.search-bar i{
+    position: absolute;
+    color: #3C8A82;
+    left: 12px;
+}
+
+.search-bar input{
+    width: 520px;
+    height: 36px;
+    padding-left: 36px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+}
+
+.account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: solid 1px #ffffff90;
+    padding-left: 15px;
+}
+
+.profile-picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4px;
+}
+
+.fa-user{
+    font-size: 32px;
+}
+
+.member-name-id-wrapper{
+    margin-left: 8px;
+}
+
+.member-name-id-wrapper > div:first-child{
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.member-name-id-wrapper > div:last-child{
+    font-size: 12px;
+}
+
+
+.main{
+    display: grid;
+    grid-template-columns: 22% 1fr;
+    height: 100%;
+}
+
+.sidebar {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #ffffff;
+    color: #275853;
+    box-shadow: 4px 0 8px -2px rgba(0, 0, 0, 0.115);
+    z-index: 0;
+}
+
+
+.sidebar-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #275853;
+}
+
+.sidebar-tools{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 500;
+    border-top: solid 1px #275853;
+    position: relative;
+    padding-top: 16px;
+}
+
+.sidebar-tools div{
+    display: flex;
+    align-items: center;    
+    height: 40px;
+    padding: 8px;
+    margin: 8px 0px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 16px;
+}
+
+.sidebar-tools svg{
+    margin: 12px;
+}
+
+.sidebar-tools div:hover {
+    background-color: #E6F4EC;
+    color: #275853;
+}
+
+.sidebar-tools .content-panel.active:hover {
+    background-color: #275853; 
+    color: #ffffff;            
+    cursor: default;         
+}
+
+.sidebar-tools svg path {
+    fill: #275853;
+    transition: fill 0.2s ease-in-out;
+  }
+  
+.sidebar-tools div:hover svg path {
+    fill: #275853;
+}
+  
+
+.sidebar-tools svg:hover{
+    fill: #ffffff;
+}
+
+.sidebar-tools .content-panel.active svg path {
+    fill: #ffffff;
+}
+
+.content-panel.active,
+.sidebar-tools svg:active {
+    background-color: #275853;
+    color: #FFFFFF;
+}
+
+.about-out{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.about-out div:hover{
+    text-decoration: underline;
+    color: #275853;
+    cursor: pointer;
+}
+
+.about-us{
+    margin-bottom: 2rem;
+}
+
+.about-logout{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.dashboard {
+    height: 100%; 
+    background-color: #E6F4EC;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+  
+
+.section-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #275853;
+}
+
+
+.update-button, .cancel-button, .save-button, .add-button, .delete-button{
+    width: 134px;
+    height: 55px;
+    background-color: #275853;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.1s ease-in-out;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.115);
+
+}
+
+.update-button:hover, .cancel-button:hover, .save-button:hover, .add-button:hover, .delete-button:hover{
+    background-color: #27585399;
+}
+
+.update-button:active, .cancel-button:active, .save-button:active, .add-button:active, .delete-button:active{
+    background-color: #275853;
+    color: #ffffff;
+}
+
+
+.section-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+.personal-information, .contact-information, .spouse-information{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #275853;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.115);
+
+}
+
+.personal-information-title, .contact-information-title, .spouse-information-title, .update-information-title, .add-information-title{
+    background-color: #3C8A82;
+    font-size: 24px;
+    padding: 16px 32px;
+    color: #ffffff;
+}
+
+.personal-information-list, .contact-information-list, .spouse-information-list{
+    padding: 0px 32px;
+}
+
+.personal-information-list div, .contact-information-list div, .spouse-information-list div{
+    margin: 8px 0px;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+
+.personal-information-list div > :last-child, .contact-information-list div > :last-child, .spouse-information-list div > :last-child{
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.section-3{
+    display: grid;
+    height: auto;
+}
+
+
+/* eto yung original
+
+.section-4{
+    display: flex;
+    flex-direction: column;
+}
+
+.update-information{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #275853;
+    margin-bottom: 1rem;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.115);
+
+}
+
+.update-information-list .form-group{
+    display: flex;
+    padding: 0px 32px;
+    flex-direction: column;
+}
+
+.update-information-list > div > div .form-group{
+    display: flex;
+    align-items: center;
+    margin: 8px 0px;
+    gap: 8px;
+}
+
+.update-information-list > div > div > input .form-group{
+    padding: 4px 4px;
+    font-size: 16px;
+    border: 1px solid #3C8A82;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.update-information-list > div > p .form-group{
+    font-weight: bold;
+}
+
+.update-information-list > div > div > input:focus .form-group{
+    outline: 1px solid #275853;
+}
+
+.update-member-information, 
+.update-contact-information, 
+.update-spouse-information .form-group{
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: solid 1px #27585390;
+}
+
+.update-member-information > div, 
+.update-contact-information > div, 
+.update-spouse-information > div{
+    display: flex;
+    flex-direction: column;
+}
+.update-member-information > div > div, 
+.update-contact-information > div > div, 
+.update-spouse-information > div > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.update-member-information > div > div > label, 
+.update-contact-information > div > div > label, 
+.update-spouse-information > div > div > label{
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.update-member-information > div > div > input, 
+.update-contact-information > div > div > input, 
+.update-spouse-information > div > div > input{
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #3C8A82;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    width: auto;
+    min-width: 120px;   
+    max-width: 100%;   
+    box-sizing: border-box;
+}
+.update-member-information > div > div > input:focus, 
+.update-contact-information > div > div > input:focus, 
+.update-spouse-information > div > div > input:focus{
+    outline: 1px solid #275853;
+} */
+ 
+/* Match PHP classes and structure from your highlighted section */
+
+.section-4 {
+    /* flex: 1 1 0; */
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    /* overflow-y: scroll;       
+    scrollbar-width: auto;
+    scrollbar-color: #3C8A82 #e6f4ec; */
+}
+
+.update-information {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #275853;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.115);
+}
+
+/* .update-information-title {
+    font-family: Montserrat, Sans-Serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #275853;
+    margin: 24px 0 8px 32px;
+} */
+
+.update-information-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+    max-height: 65vh;         /* Adjust as needed for your layout */
+    overflow-y: auto;         /* Enables vertical scrolling */
+    scrollbar-width: thin;
+    scrollbar-color: #3C8A82 #e6f4ec;
+}
+
+.update-information-list::-webkit-scrollbar {
+    width: 8px;
+}
+.update-information-list::-webkit-scrollbar-thumb {
+    background: #3C8A82;
+    border-radius: 8px;
+}
+.update-information-list::-webkit-scrollbar-track {
+    background: #e6f4ec;
+    border-radius: 8px;
+}
+
+.update-information-list > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.update-information-list form.form-group {
+    width: 100%;
+}
+
+.update-information-list > div > p {
+    font-weight: bold;
+    margin: 16px 0 8px 0;
+    color: #3C8A82;
+    font-family: Montserrat, Sans-Serif;
+}
+
+.update-information-list > div > div {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    gap: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;      /* Make label and input side by side */
+    align-items: center;      /* Vertically center label and input */
+    gap: 16px;                /* Space between label and input */
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #275853;
+    font-family: Montserrat, Sans-Serif;
+    min-width: 140px;         /* Ensures labels align vertically */
+    margin-bottom: 0;         /* Remove bottom margin for horizontal layout */
+    text-align: right;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+    flex: 1;                  /* Input takes remaining space */
+    padding: 4px 8px;
+    font-size: 16px;
+    border: 1px solid #3C8A82;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    background: #f8f8f8;
+    color: #275853;
+    font-family: Montserrat, Sans-Serif;
+    min-width: 120px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus {
+    outline: 1px solid #275853;
+    background: #fff;
+}
+
+.options {
+    display: flex;
+    gap: 16px;
+    font-family: Montserrat, Sans-Serif;
+    font-size: 15px;
+    color: #275853;
+}
+
+.update-member-information,
+.update-contact-information,
+.update-spouse-information,
+.update-contributor-information {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: solid 1px #27585390;
+}
+
+.update-member-information {
+    height: 400px;      /* Adjust as needed */
+}
+
+.update-contact-information {
+    height: 200px;      /* Adjust as needed */
+    width: 77%;
+}
+
+.update-spouse-information {
+    height: 100px;      /* Adjust as needed */
+    width: 77%;
+}
+
+.update-contributor-information {
+    height: 100%;      /* Adjust as needed */
+    width: 77%;
+}
+
+.save-button, .cancel-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    color: #fff;
+    background: #4db6ac;
+    font-family: Montserrat, Sans-Serif;
+    font-weight: bold;
+    transition: 0.2s background;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background: #b2dfdb;
+    color: #275853;
+}
+
+.save-button:hover {
+    background: #80cbc4;
+}
+
+.cancel-button:hover {
+    background: #3C8A82;
+    color: #fff;
+}
+
+
+.custom-date {
+    outline: none;
+    cursor: pointer;
+    font-family: Montserrat, Poppins, Roboto;
+  }
+  
+  .custom-date:focus {
+    border-color: #275853;
+    color: #275853;
+  }
+  
+  input[type="date"] {
+    color: #275853; /* text color */
+  }
+
+  input[type="file"] {
+    font-family: Montserrat, Poppins, Roboto;
+    color: #275853;
+  }
+  
+  
+  input[type="file"] {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 5px;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+.homepage{
+    width: 240px;
+    height: 55px;
+    background-color: #ffffff;
+    color: #275853;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.115);
+  }
+
+.homepage:hover{
+    background-color: #ffffff99;
+}
+
+.homepage:active{
+    background-color: #ffffff95;
+}
+
+.about-us-parent{
+    padding: 4rem 8rem;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+}
+
+.about-section-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #275853;
+    font-weight: bold;
+}
+
+.about-title{
+    font-size: 64px;
+    margin-bottom: 46px;
+}
+
+.about-text{
+    font-size: 20px;
+}
+
+.about-section-2{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-cards-parent-1{
+    display: flex;
+}
+
+.card{
+    background-color: lightpink;   
+}
+
+.about-cards-parent-1{
+    display: flex;
+    background-color: #3C8A82;
+}
+
+/* Dependents Table Styling */
+.spouse-information-list table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-family: Montserrat, Sans-Serif;
+    margin: 0 auto 24px auto;
+    /* padding: 32px; */
+    margin-top: 32px;
+}
+
+.spouse-information-list thead {
+    background: #3C8A82;
+    color: #fff;
+}
+
+.spouse-information-list th, 
+.spouse-information-list td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.spouse-information-list th {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.spouse-information-list tbody tr {
+    border-bottom: 1px solid #e6f4ec;
+    transition: background 0.2s;
+}
+
+.spouse-information-list tbody tr:last-child {
+    border-bottom: none;
+}
+
+.spouse-information-list tbody tr:hover {
+    background: #e6f4ec;
+}
+
+.spouse-information-list td {
+    color: #275853;
+}
+
+.spouse-information-list th:first-child,
+.spouse-information-list td:first-child {
+    border-top-left-radius: 12px;
+}
+.spouse-information-list th:last-child,
+.spouse-information-list td:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* Match select styling to text inputs in dashboard.css */
+.form-group select.form-control {
+    flex: 1;
+    padding: 4px 8px;
+    font-size: 16px;
+    border: 1px solid #3C8A82;
+    border-radius: 4px;
+    background: #f8f8f8;
+    color: #275853;
+    font-family: Montserrat, Sans-Serif;
+    min-width: 120px;
+    max-width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-group select.form-control:focus {
+    outline: 1px solid #275853;
+    background: #fff;
+}
+
+.homepage{
+    width: 240px;
+    height: 55px;
+    background-color: #ffffff;
+    color: #275853;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.115);
+  }
+
+.homepage:hover{
+    background-color: #ffffff99;
+}
+
+.homepage:active{
+    background-color: #ffffff95;
+}
+
+.about-us-parent{
+    padding: 4rem 8rem;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+}
+
+.about-section-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #275853;
+    font-weight: bold;
+}
+
+.about-title{
+    font-size: 64px;
+    margin-bottom: 46px;
+}
+
+.about-text{
+    font-size: 20px;
+}
+
+.about-section-2{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-cards-parent-1{
+    display: flex;
+}
+
+.card{
+    background-color: lightpink;   
+}
+
+.about-cards-parent-1{
+    display: flex;
+    background-color: #3C8A82;
+}
